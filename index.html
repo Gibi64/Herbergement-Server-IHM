@@ -1,0 +1,653 @@
+<html><head><title>Volets-arrosage</title>
+<style>
+body { margin:0; overflow:hidden; background:#111; }
+#synoptique-container { position:relative; width:1600px; height:800px; }
+canvas { background:#BBCFE0; display:block; }
+.event-layer { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; }
+.event-layer * { pointer-events:auto; }
+</style>
+</head><body>
+<div id='synoptique-container'>
+  <canvas id='MainFlowsheet' width='1600' height='800'></canvas>
+  <div class='event-layer'>
+  </div>
+  <div id='MainData' style='display:none;' CommandDataSet='
+<Id=204,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{693,108,56,38},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[strokeRect,{693,108,56,38},canvas],
+[save,{},canvas],
+[beginPath,{},canvas],
+[rect,{695,110,52,34},canvas],
+[clip,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"left"},canvas],
+[textBaseline,{"top"},canvas],
+[fillText,{"",699,114},canvas],
+[restore,{},canvas]
+>
+<Id=205,
+[fillStyle,{"#c0c0c0"},canvas],
+[beginPath,{},canvas],
+[moveTo,{130,89},canvas],
+[lineTo,{535,89},canvas],
+[lineTo,{535,329},canvas],
+[lineTo,{130,329},canvas],
+[closePath,{},canvas],
+[fill,{},canvas],
+[stroke,{},canvas]
+>
+<Id=206,
+[fillStyle,{"#00ff00"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{1},canvas],
+[beginPath,{},canvas],
+[moveTo,{565,124},canvas],
+[lineTo,{576,104},canvas],
+[lineTo,{587,124},canvas],
+[lineTo,{581,124},canvas],
+[lineTo,{581,184},canvas],
+[lineTo,{570,184},canvas],
+[lineTo,{570,124},canvas],
+[closePath,{},canvas],
+[fill,{},canvas],
+[stroke,{},canvas]
+>
+<Id=207,
+[fillStyle,{"#00ff00"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{1},canvas],
+[beginPath,{},canvas],
+[moveTo,{564,308},canvas],
+[lineTo,{575,328},canvas],
+[lineTo,{586,308},canvas],
+[lineTo,{580,308},canvas],
+[lineTo,{580,248},canvas],
+[lineTo,{569,248},canvas],
+[lineTo,{569,308},canvas],
+[closePath,{},canvas],
+[fill,{},canvas],
+[stroke,{},canvas]
+>
+<Id=201,
+[clickButton,{"<button id="201" style="position:absolute; display:flex; justify-content:center; align-items:center; left:607px; top:137px; width:47px; height:47px; background-color:#c0c0c0; color:#000000; border:2px solid #333; border-radius:8px; text-decoration:none; z-index:100; font-family:Segoe UI; font-size:13px; font-weight:600;">Up</button>"},html]
+>
+<Id=202,
+[clickButton,{"<button id="202" style="position:absolute; display:flex; justify-content:center; align-items:center; left:600px; top:195px; width:82px; height:71px; background-color:#c0c0c0; color:#000000; border:2px solid #333; border-radius:8px; text-decoration:none; z-index:100; font-family:Segoe UI; font-size:13px; font-weight:600;">Stop</button>"},html]
+>
+<Id=203,
+[clickButton,{"<button id="203" style="position:absolute; display:flex; justify-content:center; align-items:center; left:610px; top:280px; width:48px; height:45px; background-color:#c0c0c0; color:#000000; border:2px solid #333; border-radius:8px; text-decoration:none; z-index:100; font-family:Segoe UI; font-size:13px; font-weight:600;">Down</button>"},html]
+>
+<Id=208,
+[fillStyle,{"#000000"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{1},canvas],
+[fillRect,{130,99,405,1},canvas],
+[beginPath,{},canvas],
+[moveTo,{130,99},canvas],
+[lineTo,{535,99},canvas],
+[stroke,{},canvas]
+>
+<Id=209,
+[fillStyle,{"#000000"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{1},canvas],
+[fillRect,{130,119,405,1},canvas],
+[beginPath,{},canvas],
+[moveTo,{130,119},canvas],
+[lineTo,{535,119},canvas],
+[stroke,{},canvas]
+>
+<Id=210,
+[fillStyle,{"#000000"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{1},canvas],
+[fillRect,{130,129,405,1},canvas],
+[beginPath,{},canvas],
+[moveTo,{130,129},canvas],
+[lineTo,{535,129},canvas],
+[stroke,{},canvas]
+>
+<Id=211,
+[fillStyle,{"#000000"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{1},canvas],
+[fillRect,{130,139,405,1},canvas],
+[beginPath,{},canvas],
+[moveTo,{130,139},canvas],
+[lineTo,{535,139},canvas],
+[stroke,{},canvas]
+>
+<Id=212,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{693,283,56,38},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[strokeRect,{693,283,56,38},canvas],
+[save,{},canvas],
+[beginPath,{},canvas],
+[rect,{695,285,52,34},canvas],
+[clip,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"left"},canvas],
+[textBaseline,{"top"},canvas],
+[fillText,{"",699,289},canvas],
+[restore,{},canvas]
+>
+<Id=213,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{223,355,92,26},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[strokeRect,{223,355,92,26},canvas],
+[save,{},canvas],
+[beginPath,{},canvas],
+[rect,{225,357,88,22},canvas],
+[clip,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"right"},canvas],
+[textBaseline,{"middle"},canvas],
+[fillText,{"Test input",309,368},canvas],
+[restore,{},canvas]
+>
+<Id=214,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{350,357,117,33},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[strokeRect,{350,357,117,33},canvas],
+[save,{},canvas],
+[beginPath,{},canvas],
+[rect,{352,359,113,29},canvas],
+[clip,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"left"},canvas],
+[textBaseline,{"middle"},canvas],
+[fillText,{"",356,373},canvas],
+[restore,{},canvas]
+>
+<Id=215,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{208,415,81,27},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{1},canvas],
+[strokeRect,{208,415,81,27},canvas],
+[fillStyle,{"#ffffff"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{2},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[beginPath,{},canvas],
+[ellipse,{217, 428, 6, 6, 0.000000, 0,6.283185},canvas],
+[fill,{},canvas],
+[stroke,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"left"},canvas],
+[textBaseline,{"middle"},canvas],
+[fillText,{"On",232,428},canvas]
+>
+<Id=216,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{295,416,81,27},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{1},canvas],
+[strokeRect,{295,416,81,27},canvas],
+[fillStyle,{"#ffffff"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{2},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[beginPath,{},canvas],
+[ellipse,{304, 429, 6, 6, 0.000000, 0,6.283185},canvas],
+[fill,{},canvas],
+[stroke,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"left"},canvas],
+[textBaseline,{"middle"},canvas],
+[fillText,{"Off",319,429},canvas]
+>
+<Id=217,
+[fillStyle,{"#ffffff"},canvas],
+[fillRect,{382,417,81,27},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{1},canvas],
+[strokeRect,{382,417,81,27},canvas],
+[fillStyle,{"#ffffff"},canvas],
+[strokeStyle,{"#000000"},canvas],
+[lineWidth,{2},canvas],
+[strokeStyle,{"#333333"},canvas],
+[lineWidth,{2},canvas],
+[beginPath,{},canvas],
+[ellipse,{391, 430, 6, 6, 0.000000, 0,6.283185},canvas],
+[fill,{},canvas],
+[stroke,{},canvas],
+[font,{"normal 13px Segoe UI"},canvas],
+[fillStyle,{"#000000"},canvas],
+[textAlign,{"left"},canvas],
+[textBaseline,{"middle"},canvas],
+[fillText,{"Auto",406,430},canvas]
+>'></div>
+</div>
+<script>
+var g_szBackGroundColor = "#BBCFE0";
+var g_ServerUrl = "http://127.0.0.1:8080";
+var g_szPageName = "Volets-arrosage";
+var g_szBackGroundColor = g_szBackGroundColor || "#000000";
+var JacquesPainter = {
+    ArrayOfBlinkingActions: [],
+    blinkState: true,
+    Actions: {
+        "html": function (szId, szKey, args) {
+            var layer = document.querySelector('.event-layer');
+            var old = document.getElementById(szId);
+            if (old) old.parentNode.removeChild(old);
+            JacquesPainter.executeHTML(layer, args[0], szId);
+        },
+        "canvas": function (szId, szKey, args) {
+            var ctx = JacquesPainter.getCanvasContext();
+            if (ctx) {
+                var numericArgs = args.map(attr => (!isNaN(attr) && attr.trim() !== "") ? Number(attr) : attr);
+                JacquesPainter.executeCanvas(ctx, szKey, numericArgs);
+            }
+        },
+        "sys": function (szId, szKey, args) {
+            if (szKey === 'LastIndex') {
+                currentLastIndex = Number(args[0]);
+                // log du lastIndex pour debug
+                //console.log("Mise à jour du LastIndex :", currentLastIndex);
+            }
+            else if (szKey === 'Font')
+            {
+                // log du Font
+                console.log("Mise à jour du Font :", args[0]);
+                g_CurrentFont = args[0];
+            }
+            // Le blink est géré par le flux du Dispatcher, pas par le rendu sys
+        }
+    },
+    isBetweenQuotes: function (s, pos) {
+        let n = 0, i = 0;
+        while (true) {
+            i = s.indexOf('"', i);
+            if (i === -1 || i > pos) break;
+            n++; i++;
+        }
+        return n % 2 === 1;
+    },
+
+    getCanvasContext: function () {
+        var canvas = document.getElementById('MainFlowsheet');
+        return canvas ? canvas.getContext('2d') : null;
+    },
+    ClearObject: function (szId) {
+        // 1. On cherche la métadonnée "rectangle" dans le bloc sys
+        var rectAction = this.ArrayOfBlinkingActions.find(item =>
+            item.id === szId && item.action.key === "rectangle"
+        );
+
+        if (rectAction) {
+            var r = rectAction.action.args;
+            var x1 = Number(r[0]);
+            var y1 = Number(r[1]);
+            var x2 = Number(r[2]);
+            var y2 = Number(r[3]);
+            var width = x2 - x1;
+            var height = y2 - y1;
+
+            console.log("ID:", szId, " | Gommage Rect:", r[0], r[1], r[2], r[3]);
+            // --- CAS CANVAS ---
+            var ctx = this.getCanvasContext();
+            if (ctx) {
+                ctx.fillStyle = g_szBackGroundColor;
+                ctx.fillRect(x1, y1, width, height);
+            }
+
+            // --- CAS HTML ---
+            // Si l'objet est un DIV, on n'efface pas, on cache.
+            var el = document.getElementById(szId);
+            if (el) {
+                el.style.visibility = 'hidden';
+            }
+        }
+    },
+    DrawAction: function (szId, action) {
+        var ctx = this.getCanvasContext();
+        if (ctx && action.translator === "canvas") {
+            this.executeCanvas(ctx, action.key, action.args);
+        }
+    },
+    dispatchTranslate: function (szId, szKey, vectorAttributes, szTranslator) {
+        // Appel direct via la matrice : pas de tests, pas de verrues
+        var fn = this.Actions[szTranslator];
+        if (fn) {
+            fn(szId, szKey, vectorAttributes);
+        }
+    },
+    transportParser: function (s) {
+        if (!s) return;
+        let vectorAttributes = [];
+        let szId = "", szKey = "";
+
+        // Nettoyage rapide des blancs hors quotes
+        let clean = "";
+        for (let i = 0; i < s.length; i++) {
+            if ((s[i] === ' ' || s[i] === '\n' || s[i] === '\r') && !this.isBetweenQuotes(s, i)) continue;
+            clean += s[i];
+        }
+        s = clean;
+
+        while (s.length > 0) {
+            if (s.substring(0, 4) !== "<Id=") return 1;
+            s = s.substring(4);
+            let iVirg = s.indexOf(',');
+            szId = s.substring(0, iVirg);
+            s = s.substring(iVirg + 1);
+            let bMapBlinking = false;
+            while (true) {
+                vectorAttributes = [];
+                if (s[0] !== '[') break;
+                s = s.substring(1);
+
+                let iCommaKey = s.indexOf(',');
+                szKey = s.substring(0, iCommaKey);
+                let position = iCommaKey + 1;
+
+                if (s[position] !== '{') return 1;
+                position++;
+
+                let iClosingCurly = s.indexOf('}', position);
+                let subPos = position;
+                while (subPos < iClosingCurly) {
+                    let iComma = s.indexOf(',', subPos);
+                    let attrEnd = (iComma !== -1 && !this.isBetweenQuotes(s, iComma) && iComma < iClosingCurly)
+                        ? iComma : iClosingCurly;
+
+                    let attribute = s.substring(subPos, attrEnd);
+                    if (attribute.startsWith('"') && attribute.endsWith('"')) {
+                        attribute = attribute.substring(1, attribute.length - 1);
+                    }
+                    vectorAttributes.push(attribute);
+
+                    if (attrEnd === iClosingCurly) break;
+                    subPos = attrEnd + 1;
+                }
+
+                position = iClosingCurly + 1;
+                if (s[position] === ',') position++;
+
+                let iBrackets = s.indexOf(']', position);
+                let translator = s.substring(position, iBrackets);
+
+                // LE PARSER FAIT SON BOULOT : IL APPELLE LE DISPATCH
+                if (szKey === "blink") {
+                    if (vectorAttributes[0] === "on") bMapBlinking = true;
+                    else {
+                        this.ArrayOfBlinkingActions = this.ArrayOfBlinkingActions.filter(item => item.id !== szId);
+                        bMapBlinking = false;
+                    }
+                }
+
+                if (bMapBlinking && szKey !== "blink")
+                {
+                    this.ArrayOfBlinkingActions.push({
+                        id: szId,
+                        action: { key: szKey, args: [...vectorAttributes], translator: translator }
+                    });
+                } else
+                {
+                    // ON APPELLE TOUJOURS DISPATCH (même pour blink, car il sait gérer)
+                    this.dispatchTranslate(szId, szKey, vectorAttributes, translator);
+                }
+                position = iBrackets + 1;
+                if (s[position] === '>')
+                {
+                    if (szKey === "blink" && vectorAttributes[0] === "off")
+                    {
+                        // Nettoyage : on filtre le vecteur pour retirer cet ID
+                        this.ArrayOfBlinkingActions = this.ArrayOfBlinkingActions.filter(item => item.id !== szId);
+                    }
+
+                    s = s.substring(position + 1);
+                    break;
+                }
+                else if (s[position] === ',')
+                {
+                    s = s.substring(position + 1);
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    },
+
+    executeCanvas: function (ctx, action, args) {
+        if (typeof ctx[action] === 'function') {
+            if (!args || args.length === 0) {
+                ctx[action]();
+            } else {
+                ctx[action].apply(ctx, args);
+            }
+        } else {
+            ctx[action] = args[0];
+        }
+    },
+
+    executeHTML: function (container, html, szId) {
+        if (container && html) {
+            var wrapper = document.createElement('div');
+            wrapper.id = szId;
+            wrapper.style.display = 'inline-block';
+            wrapper.innerHTML = html.trim();
+            container.appendChild(wrapper);
+        }
+    },
+
+    renderInitial: function (canvasId, soute) {
+        if (!soute) return;
+        this.transportParser(soute);
+    }
+};
+function updateFromJournal() {
+    const SERVER_URL = g_ServerUrl;
+    const PAGE_TO_INFORM = g_szPageName;
+
+    const xml =
+        `<Command Method="Events"
+                  LastIndex="${currentLastIndex}"
+                  Page="${PAGE_TO_INFORM}"/>`;
+
+    const encoded = btoa(xml);
+
+    fetch(SERVER_URL + "/" + encoded, { method: 'GET' })
+
+        .then(function (res) {
+            return res.text();
+        })
+
+        .then(function (rawString) {
+
+            console.log("Flux brut reçu :", rawString);
+
+            if (rawString && rawString.trim().length > 0) {
+                JacquesPainter.transportParser(rawString);
+            }
+
+            setTimeout(updateFromJournal, 100);
+        })
+
+        .catch(function (err) {
+            console.error("Erreur Fetch dynamique:", err);
+            setTimeout(updateFromJournal, 1000);
+        });
+} function startProto() {
+    console.log("Démarrage du Live..."); // Pour être sûr que startProto se lance
+
+    var s = document.getElementById('MainData');
+    if (s) {
+        var d = s.getAttribute('CommandDataSet');
+        JacquesPainter.renderInitial('MainFlowsheet', d);
+    }
+
+    // ON DÉPLACE LE MÉTRONOME ICI
+    console.log("Lancement du Timer de clignotement...");
+    setInterval(function () {
+        JacquesPainter.blinkState = !JacquesPainter.blinkState;
+        //console.log("Blink Tick - Etat:", JacquesPainter.blinkState, "Nb actions:", JacquesPainter.ArrayOfBlinkingActions.length);
+        // On garde une trace des IDs déjà effacés pour ne pas gommer 10 fois le même rect
+        let clearedIds = {};
+
+        JacquesPainter.ArrayOfBlinkingActions.forEach(function (item) {
+            if (JacquesPainter.blinkState) {
+                // PHASE DESSIN : On dessine TOUTES les actions
+                JacquesPainter.DrawAction(item.id, item.action);
+            } else {
+                // PHASE GOMMAGE : On n'efface qu'une seule fois par ID
+                if (!clearedIds[item.id]) {
+                    JacquesPainter.ClearObject(item.id);
+                    clearedIds[item.id] = true;
+                }
+            }
+        });
+    }, 500);
+   updateFromJournal();
+}
+///////////////////////////////////////// Main ///////////////////////////////////////////////
+document.addEventListener('DOMContentLoaded', startProto);
+// On récupère le conteneur graphique une fois pour toutes
+const g_Container = document.getElementById('synoptique-container');
+const g_Canvas = document.getElementById('MainFlowsheet');
+var currentLastIndex = 0;
+let g_jsShiftActive = "0";
+let g_jsCtrlActive = "0";
+let g_jsAltActive = "0";
+
+let g_jsIsMouseDown = false;
+g_CurrentFont = '';
+// Enregistrement des vecteurs d'IRQ
+document.addEventListener('mousedown', OnMouseDown);
+document.addEventListener('mouseup', OnMouseUp);
+document.addEventListener('mousemove', OnMouseMove);
+document.addEventListener('dblclick', OnDoubleClick);
+document.addEventListener('keydown', OnKeyDown);
+document.addEventListener('keypress', OnChar); 
+document.addEventListener('keyup', OnKeyUp);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Fonction magique pour avoir les vraies coordonnées (X, Y) relatives au Canvas
+function GetRelativeCoords(event) {
+    if (!g_Container) return { x: event.clientX, y: event.clientY };
+    let rect = g_Container.getBoundingClientRect();
+    return {
+        x: Math.round(event.clientX - rect.left),
+        y: Math.round(event.clientY - rect.top)
+    };
+}
+
+// Fonction universelle d'envoi d'IRQ (La norme stricte)
+function SendIRQ(xmlString) {
+    let encoded = btoa(xmlString);
+    fetch(g_ServerUrl + "/" + encoded, { method: 'GET' });
+}
+
+// Dans jsContainer.js, on aligne les codes sur l'énumération C++ (1000 + x)
+function OnMouseDown(event)
+{
+    g_jsIsMouseDown = true;
+    let coords = GetRelativeCoords(event);
+    let xml = `<Command Method="MouseDown" Id="0" X="${coords.x}" Y="${coords.y}" Page="${g_szPageName}"/>`;
+    SendIRQ(xml);
+}
+
+function OnMouseUp(event)
+{
+    //let coords = GetRelativeCoords(event);
+    //let xml = `<Command Method="MouseUp" Id="0" X="${coords.x}" Y="${coords.y}" Page="${g_szPageName}"/>`;
+    //SendIRQ(xml);
+    g_jsIsMouseDown = false;
+}
+
+function OnMouseMove(event)
+{
+    if (g_jsIsMouseDown)
+    { // Uniquement si le clic gauche est maintenu (sélection)
+        let coords = GetRelativeCoords(event);
+        let xml = `<Command Method="MouseMove" Id="0" X="${coords.x}" Y="${coords.y}" Page="${g_szPageName}"/>`;
+        SendIRQ(xml);
+    }
+}
+
+function OnDoubleClick(event) {
+    let coords = GetRelativeCoords(event);
+    let xml = `<Command Method="DoubleClick" Id="0" X="${coords.x}" Y="${coords.y}" Page="${g_szPageName}"/>`;
+    SendIRQ(xml);
+}
+
+function OnKeyDown(event)
+{
+    let asciiCode = event.keyCode || event.which;
+
+    // 1. MISE À JOUR DE LA MÉMOIRE LOCALE (Touches d'état)
+    // Si l'utilisateur appuie sur une touche système, on stocke l'état et ON ARRÊTE LA FONCTION (Pas de fetch !)
+    if (event.key === "Shift") { g_jsShiftActive = "1"; return; }
+    if (event.key === "Control") { g_jsCtrlActive = "1"; return; }
+    if (event.key === "Alt") { g_jsAltActive = "1"; return; }
+
+    // 2. ENVOI DE L'INTERRUPTION (Touches d'action : Flèches, Lettres, Backspace...)
+    // Ici, on embarque la mémoire de l'état actuel du clavier local
+    let xml = `<Command Method="KeyDown" 
+                        AsciiCode="${asciiCode}" 
+                        Ctrl="${g_jsCtrlActive}" 
+                        Shift="${g_jsShiftActive}" 
+                        Alt="${g_jsAltActive}" 
+                        Page="${g_szPageName}"/>`;
+    SendIRQ(xml);
+
+    // Blocage du comportement natif du navigateur pour les touches de navigation
+    if (["ArrowLeft", "ArrowRight", "Delete", "Backspace", "Enter"].includes(event.key)) {
+        event.preventDefault();
+    }
+}
+function OnKeyUp(event)
+{
+    // 3. NETTOYAGE DE LA MÉMOIRE LOCALE (Au relâchement de la touche)
+    // Dès que le doigt quitte la touche système, on remet à jour notre mémoire locale (Toujours aucun fetch)
+    if (event.key === "Shift") { g_jsShiftActive = "0"; return; }
+    if (event.key === "Control") { g_jsCtrlActive = "0"; return; }
+    if (event.key === "Alt") { g_jsAltActive = "0"; return; }
+}
+
+function OnChar(event) {
+    let asciiCode = event.charCode || event.which;
+
+    if (!g_Canvas)
+        return;
+    
+    let ctx = g_Canvas.getContext('2d');
+
+    ctx.font = g_CurrentFont;
+    ctx.textRendering = "geometricPrecision";
+    ctx.imageSmoothingEnabled = false;
+
+    let charSize = ctx.measureText(event.key).width;
+// On envoie une valeur réelle pour ne faire l'arrondi que pour la valeur finale
+    let ctrl = event.ctrlKey ? "1" : "0";
+    let shift = event.shiftKey ? "1" : "0";
+    let alt = event.altKey ? "1" : "0";
+
+    let xml = `<Command Method="Char" AsciiCode="${asciiCode}" CharSize="${charSize}" Ctrl="${ctrl}" Shift="${shift}" Alt="${alt}" Page="${g_szPageName}"/>`;
+    SendIRQ(xml);
+}
+
+
+</script>
+</body>
+</html>
